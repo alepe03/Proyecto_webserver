@@ -98,7 +98,7 @@ RUN apt-get update && \
 - Necesario antes de instalar cualquier paquete
 
 **`apt-get install -y nginx`**
-- ⭐ **PUNTO CRÍTICO:** Instala nginx manualmente
+- **PUNTO CRÍTICO:** Instala nginx manualmente
 - `-y` = acepta todas las confirmaciones
 - Descarga e instala nginx (~55MB)
 
