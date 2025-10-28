@@ -8,7 +8,6 @@ Esta sección describe todos los archivos creados para el proyecto.
 
 ### Dockerfile
 
-**Líneas:** 25  
 **Propósito:** Instala nginx desde cero
 
 ```dockerfile
@@ -38,7 +37,6 @@ CMD ["nginx", "-g", "daemon off;"]
 
 ### nginx.conf
 
-**Líneas:** 49  
 **Propósito:** Configuración del servidor web
 
 ```nginx
@@ -80,7 +78,6 @@ server {
 
 ### docker-compose.yml
 
-**Líneas:** 10  
 **Propósito:** Orquestación de Docker
 
 ```yaml
@@ -105,7 +102,6 @@ services:
 
 ### setup.sh
 
-**Líneas:** 48  
 **Propósito:** Script de configuración automatizado
 
 ```bash
@@ -128,7 +124,6 @@ services:
 
 ### public/index.html
 
-**Líneas:** ~45  
 **Propósito:** Página principal del servidor
 
 ```html
@@ -197,10 +192,10 @@ nav:
 docs/
 ├── index.md
 ├── fases/
-│   ├── phase1.md
-│   ├── phase2.md
-│   ├── phase3.md
-│   └── phase4.md
+│   ├── fase1.md
+│   ├── fase2.md
+│   ├── fase3.md
+│   └── fase4.md
 ├── archivos.md
 ├── verificacion.md
 ├── nginx.md

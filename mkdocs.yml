@@ -20,9 +20,9 @@ nav:
   - Fase 4 - Configuración Avanzada: fases/fase4.md
   - Archivos del Proyecto: archivos.md
   - Verificación: verificacion.md
+  - Conclusión: conclusion.md
   - Configuración de nginx: nginx.md
   - Docker: docker.md
-  - Conclusión: conclusion.md
 
 markdown_extensions:
   - pymdownx.highlight:

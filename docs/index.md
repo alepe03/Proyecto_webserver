@@ -66,7 +66,7 @@ docker compose up -d
 
 Después puedes acceder a:
 - http://localhost para ver la aplicación
-- http://miapp.local:1593 (si has configurado el archivo hosts)
+- http://miapp.local:1593 
 
 ---
 
