@@ -1,0 +1,36 @@
+site_name: Proyecto Servidor Web
+site_description: Memoria técnica del proyecto de despliegue de servidor web
+site_author: Alejandro
+
+theme:
+  name: material
+  palette:
+    primary: blue
+    accent: blue
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+
+nav:
+  - Inicio: index.md
+  - Fase 1 - Preparación: fases/fase1.md
+  - Fase 2 - Instalación: fases/fase2.md
+  - Fase 3 - Configuración Básica: fases/fase3.md
+  - Fase 4 - Configuración Avanzada: fases/fase4.md
+  - Archivos del Proyecto: archivos.md
+  - Verificación: verificacion.md
+  - Configuración de nginx: nginx.md
+  - Docker: docker.md
+  - Conclusión: conclusion.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - tables
+  - attr_list

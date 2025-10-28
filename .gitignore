@@ -1,0 +1,18 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# MkDocs
+site/
+
+# Sistema
+.DS_Store
+*.swp
+*~
+
+# Archivos de compresión
+*.zip
+
+# Logs
+*.log

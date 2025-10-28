@@ -1,0 +1,10 @@
+services:
+  webserver:
+    build: .
+    ports:
+      - "80:80"
+      - "1593:80"
+    volumes:
+      - ./public:/usr/share/nginx/html
+    container_name: proyecto_webserver
+
