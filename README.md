@@ -93,6 +93,8 @@ mkdocs build
 
 Ejecuta los siguientes comandos para verificar la instalación:
 
+> **Documentación en línea**: https://alepe03.github.io/Proyecto_webserver/
+
 ```bash
 # Verificar que el servidor está corriendo
 curl http://localhost
