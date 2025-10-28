@@ -1,84 +1,110 @@
-# Proyecto Webserver
+# Proyecto WebServer
 
-Proyecto con nginx instalado desde cero en Docker.
+Proyecto de despliegue de servidor web con Nginx y documentación técnica.
 
-## 📁 Estructura del proyecto
+## 📋 Descripción
+
+Este proyecto incluye la configuración completa de un servidor web con Nginx, incluyendo:
+
+- Configuración de servidor web con Nginx
+- Documentación técnica completa con MkDocs
+- Dockerización del proyecto
+- Configuración de balanceo de carga y SSL
+
+## 🚀 Inicio Rápido
+
+### Prerrequisitos
+
+- Docker y Docker Compose
+- Python 3.x (para MkDocs)
+
+### Instalación
+
+1. Clona el repositorio:
+```bash
+git clone https://github.com/alepe03/Proyecto_webserver.git
+cd Proyecto_webserver
+```
+
+2. Construye y ejecuta con Docker:
+```bash
+docker-compose up -d
+```
+
+3. Accede a la aplicación:
+- Aplicación: http://localhost
+- Documentación: https://alepe03.github.io/Proyecto_webserver/
+
+## 📚 Documentación
+
+La documentación completa está disponible en:
+- **GitHub Pages**: https://alepe03.github.io/Proyecto_webserver/
+
+### Estructura de la Documentación
+
+- Fase 1: Preparación del servidor
+- Fase 2: Instalación de componentes
+- Fase 3: Configuración básica
+- Fase 4: Configuración avanzada (SSL, balanceo de carga)
+- Verificación del sistema
+- Documentación de Docker
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Nginx**: Servidor web y reverse proxy
+- **MkDocs**: Generador de documentación estática
+- **Material for MkDocs**: Tema para la documentación
+- **Docker**: Contenedorización
+- **Docker Compose**: Orquestación de contenedores
+
+## 📁 Estructura del Proyecto
 
 ```
 proyecto_webserver/
-├── app/                    # Archivos fuente de la aplicación
-│   ├── index.html
-│   ├── styles.css
-│   └── app.js
-├── public/                 # Archivos estáticos servidos por nginx
-│   ├── index.html
-│   └── app/               # Carpeta de la aplicación
-│       ├── index.html
-│       ├── styles.css
-│       └── app.js
-├── dist/                  # VACÍA - No se usa en este proyecto
-├── Dockerfile             # Dockerfile para instalar nginx
-├── nginx.conf            # Configuración de nginx
-├── docker-compose.yml    # Configuración de Docker Compose
-└── README.md             # Este archivo
+├── app/                # Aplicación web
+├── docs/               # Documentación MkDocs
+├── public/             # Archivos públicos
+├── site/               # Site generado (gitignore)
+├── nginx.conf          # Configuración de Nginx
+├── Dockerfile          # Imagen Docker
+├── docker-compose.yml  # Orquestación Docker
+└── requirements.txt    # Dependencias Python
 ```
 
-## 🚀 Cómo usar
+## 🔧 Desarrollo
 
-### 1. Construir la imagen Docker
+Para generar la documentación localmente:
 
 ```bash
-docker compose build
+# Activar entorno virtual
+source venv/bin/activate
+
+# Instalar dependencias
+pip install -r requirements.txt
+
+# Servir documentación localmente
+mkdocs serve
+
+# Construir documentación
+mkdocs build
 ```
 
-### 2. Iniciar el servidor
+## 📖 Verificación
+
+Ejecuta los siguientes comandos para verificar la instalación:
 
 ```bash
-docker compose up -d
+# Verificar que el servidor está corriendo
+curl http://localhost
+
+# Ver logs de Docker
+docker-compose logs
 ```
 
-### 3. Acceder a la aplicación
+## 👤 Autor
 
-- **localhost** → http://localhost (puerto 80)
-- **miapp.local** → http://miapp.local:1593 (necesitas configurar el archivo hosts primero)
+Alejandro
 
-### 4. Detener el servidor
+## 📄 Licencia
 
-```bash
-docker compose down
-```
-
-## 🌐 Configurar acceso con dominio local
-
-Para acceder con `miapp.local:1593`, necesitas modificar el archivo `/etc/hosts`:
-
-### En macOS/Linux:
-
-```bash
-sudo nano /etc/hosts
-```
-    
-Agrega esta línea:
-
-```
-127.0.0.1  miapp.local
-```
-
-Luego guarda y sal (Ctrl+X, Y, Enter).
-
-Ahora podrás acceder a:
-- http://localhost:80
-- http://miapp.local:1593
-
-## 📝 Comandos útiles
-
-- **Ver logs**: `docker compose logs -f`
-- **Reconstruir**: `docker compose up -d --build`
-- **Entrar al contenedor**: `docker compose exec webserver bash`
-
-## ⚙️ Configuración
-
-El nginx está configurado para servir:
-- `/` → Página principal
-- `/app/` → La aplicación con los controles dinámicos
-
+Este proyecto es para fines educativos.
